@@ -10,7 +10,7 @@ if(action.type == "ATTACK"){
 return action.abc
 }
 if(action.type == "GREENATTACK"){
-return action.def
+return action.payload
 }
 return state;
 }
@@ -26,7 +26,7 @@ console.log("Store is now " , store.getState());
 
 //Step 4: Dispatch Action
 store.dispatch({type:"ATTACK", abc:"Iron Man"})
-store.dispatch({type:"GREENATTACK", def:"HULK"})
+store.dispatch({type:"GREENATTACK", payload:"HULK"})
 
 return (
 <div>

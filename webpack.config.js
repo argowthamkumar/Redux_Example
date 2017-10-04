@@ -1,5 +1,5 @@
 var config = {
-   entry: './src/js/App.js',
+   entry: './src/startpoint.js',
 	
    output: {
       path:'/',
