@@ -2,8 +2,8 @@ class UsersApi {
 
   static getAllCats() {
 
- return fetch('http://localhost:8091/rest/users/Ajay', {
-   mode: 'no-cors',
+ return fetch('/rest/users/Ajay', {
+   //mode: 'no-cors',
    method: 'GET',
    headers: {
      Accept: 'application/json',

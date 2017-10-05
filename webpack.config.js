@@ -8,7 +8,14 @@ var config = {
 	
    devServer: {
       inline: true,
-      port: 7007
+      port: 7007,
+      // Send API requests on localhost to API server get around CORS.
+        proxy: {
+               '/rest': {
+                   target: 'http://localhost:8091',
+                   secure: false
+               }
+           }
    },
 	
    module: {
