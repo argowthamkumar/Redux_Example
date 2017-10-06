@@ -9,9 +9,8 @@ import UserDetails from './UserDetails';
 
 class ContainerApp extends React.Component {
 
-
-
   render() {
+  //debugger;
 
   if(this.props.form.cats){
     let responsedata = this.props.form.cats;
@@ -29,15 +28,23 @@ class ContainerApp extends React.Component {
 }
 
 function mapStateToProps(state, ownProps){
+  //  debugger;
     return {
-        form : state.catReducer
+        form : state.userReducer
     }
 }
 
 function mapDispatchToProps(dispatch){
+   // debugger;
+    //1. (userReducer) - Anonymous function- self invoking function without names, userReducer is passed a paramerter
+    //2. call dispatch() is invoked passing Action (function) and userReducer will act as Call Function
+
     return {
-        loadUsersSuccess : (catReducer) => dispatch(formActions.loadUsersSuccess(catReducer))
+        loadUsersSuccess : (userReducer) => dispatch(formActions.loadUsersSuccess(userReducer))
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContainerApp);
+
+
+

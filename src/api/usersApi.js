@@ -1,6 +1,7 @@
 class UsersApi {
 
   static getAllCats() {
+  //  debugger;
 
  return fetch('/rest/users/Ajay', {
    //mode: 'no-cors',

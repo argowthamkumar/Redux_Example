@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import catReducer from './usersReducer';
+import userReducer from './usersReducer';
 
 const rootReducer = combineReducers({
   // short hand property names
-  catReducer
+  userReducer
 })
 
 export default rootReducer;

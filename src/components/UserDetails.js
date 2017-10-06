@@ -2,6 +2,7 @@ import React from 'react';
 
 class UserDetails extends React.Component{
     render(){
+       // debugger;
         console.log(this.props);
         return(
             <div>
