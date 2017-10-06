@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
+
 import * as fromActions from '../actions/userAction';
+
+import UserDetails from './UserDetails';
 
 
 class ContainerApp extends React.Component {
@@ -10,14 +13,18 @@ class ContainerApp extends React.Component {
 
   render() {
 
-console.log(this.props);
-
+  if(this.props.form.cats){
+    let responsedata = this.props.form.cats;
     return (
-      <div>
-Test
+          <div>
+            <UserDetails user={responsedata}/>
+          </div>
+        );
+  }else{
+    return(<div></div>);
+  }
 
-      </div>
-    );
+
   }
 }
 
